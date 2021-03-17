@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+        {% block formulario%}
+        <form class="for-group" method="POST" action="{% url 'agregar_usuario'%}">
+        {% csrf_token %}
+        <label>Nombre</label>
+        <input name="nombreu" placeholder="Ingrese su Nombre"></input>
+        <label>Correo</label>
+        <input name="correo" placeholder="Ingrese su Correo"></input>
+        <label>Telefono</label>
+        <input name="telefono" placeholder="Ingrese su Telefono"></input>
+        <button type=submit class="btn btn-primary">AGREGAR USUARIO</button>
+        </form>
+        {%endblock%}
